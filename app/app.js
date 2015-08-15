@@ -3,6 +3,11 @@ import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
 import inheritance from './inheritance';
+import numericBox from './numberic_box'
+
+var textbox = numericBox.create();
+console.log(textbox.valid("12")); //true
+textbox.onFocus();
 
 var App;
 
