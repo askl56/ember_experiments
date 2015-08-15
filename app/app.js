@@ -5,11 +5,19 @@ import config from './config/environment';
 import inheritance from './inheritance';
 import numericBox from './numberic_box';
 import user from './user';
+import timeManager from './time_manager'
+
+var myTimeManager = timeManager.create({
+  time: 12
+});
+
+myTimeManager.set("time",22);
 
 myUser = user.create({
   firstName: "Andrew",
   lastName: "Scott"
 });
+
 console.log(myUser.get('fullName')); // Andrew Scott
 
 myUser.set("firstName","Tony");

@@ -4,6 +4,7 @@ export default Ember.Object.extend({
   firstName: "",
   lastName: "",
   fullName: function(){
-    return this.get(firstName) + " " + this.get('lastName');
-  }.property('firstName','lastName')
+    console.log("fullName computed property called");
+    return this.get('firstName') + " " + this.get('lastName');
+  }.property('lastName')
 });
