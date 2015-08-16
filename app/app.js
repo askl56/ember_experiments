@@ -28,6 +28,27 @@ var textbox = numericBox.create();
 console.log(textbox.valid("12")); //true
 textbox.onFocus();
 
+var darren = father.create({
+  name:'Darren',
+  age:40,
+  address:'Brisbane'
+});
+
+var dan = child.create({
+  school:'Brisbane State High School',
+  father: darren
+});
+
+console.log(dan.get('address'));
+
+darren.set('address','sydney');
+
+console.log(dan.get('address'));
+
+//Output
+//Brisbane
+//sydney
+
 var App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
