@@ -6,6 +6,9 @@ import inheritance from './inheritance';
 import numericBox from './numberic_box';
 import user from './user';
 import timeManager from './time_manager'
+import father from './father'
+import child from './child'
+import prototype from './prototype';
 
 var myTimeManager = timeManager.create({
   time: 12
@@ -61,5 +64,6 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 inheritance();
+prototype();
 
 export default App;
